@@ -42,6 +42,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'devloper',
     'human_resources.apps.HumanResourcesConfig',
+    'corsheaders',
+    'rest_framework',
+
+    
 
 ]
 
@@ -53,6 +57,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+
 ]
 
 ROOT_URLCONF = 'forsa.urls'
@@ -72,7 +78,10 @@ TEMPLATES = [
         },
     },
 ]
-
+CORS_ALLOWED_ORIGINS = [
+     'http://localhost:3000', 
+     'http://localhost:3001',
+]
 WSGI_APPLICATION = 'forsa.wsgi.application'
 
 
