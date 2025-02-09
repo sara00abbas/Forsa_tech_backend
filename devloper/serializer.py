@@ -15,8 +15,3 @@ class LoginSerializer(serializers.Serializer):
     password = serializers.CharField(required=True, min_length=8, write_only=True)
 
 
-
-
-
-
-
